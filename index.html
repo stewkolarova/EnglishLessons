@@ -1,16 +1,20 @@
+<!-- The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.-->
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- A typical mobile-optimized site contains something like the following,  the special value device-width is the width of the screen in CSS pixels at a scale of 100% -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CCS styles -->
 <style>
 body {
-  margin: 0;
+  margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(187, 218, 243);
 }
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(20, 49, 92);
 }
 
 .topnav a {
@@ -23,12 +27,12 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(187, 218, 243);
   color: black;
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #338cc7;
   color: white;
 }
 </style>
@@ -36,7 +40,7 @@ body {
     function selectMenuItem(id, el) {
         const activeMenuItem = document.getElementsByClassName('active')[0];
         activeMenuItem.className = "";
-s        el.className = "active";
+        el.className = "active";
 
         const elements = document.getElementsByClassName('content');
         Array.from(elements).forEach(element => {
@@ -61,7 +65,6 @@ s        el.className = "active";
   </div>
   
   <div style="padding-left:16px">
-    <h2>Top Navigation Example</h2>
     <p class="content" id="home" style="display:block;">Home Some content..</p>
     <p class="content"id="news" style="display:none;">News Some content..</p>
     <p class="content" id="contact" style="display:none;">Contact Some content..</p>
